@@ -2,8 +2,6 @@ function TncDapp() {
 
     // mainnet 
        const web3 = new Web3('https://babel-api.mainnet.iotex.io');
-    // testnet
-       const web3 = new Web3('https://babel-api.testnet.iotex.io');
 
     //const ipfs = window.IpfsHttpClient('ipfs.infura.io', '5001', { protocol: 'https' });
     const _this = this;
