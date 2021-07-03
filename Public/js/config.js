@@ -20,7 +20,7 @@ let disable_royalties_button = false;
 let blocked_collections = [];
 
 switch(chain_id){
-    // Harmony (ONEs)
+    // IoTeX
     case '4689':
         blocked_collections = [
             "0x601c54655927E15f897480Bf0964085892Ec2d4F".toLowerCase(), // haremtoken
