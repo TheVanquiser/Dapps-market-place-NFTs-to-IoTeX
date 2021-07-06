@@ -16,21 +16,24 @@
   <script type="text/javascript" src="js/handlebars.js"></script>
   <script type="text/javascript" src="js/ipfs.js"></script>
   <script type="text/javascript" src="js/buffer.js"></script>
-  <script type="text/javascript" src="js/config.js?v=1.9.10"></script>
-  <script type="text/javascript" src="js/misc.js?v=1.9.10"></script>
-  <script type="text/javascript" src="js/iotxABI.js?v=1.9.10"></script>
-  <script type="text/javascript" src="js/erc1155ABI.js?v=1.9.10"></script>
-  <script type="text/javascript" src="js/multiBatchABI.js?v=1.9.10"></script>
-  <script type="text/javascript" src="js/marketABI.js?v=1.9.10"></script>
-  <script type="text/javascript" src="js/marketWrapABI.js?v=1.9.10"></script>
-  <script type="text/javascript" src="js/swapABI.js?v=1.9.10"></script>
-  <script type="text/javascript" src="js/erc20ABI.js?v=1.9.10"></script>
-  <script type="text/javascript" src="js/lib.js?v=1.9.10"></script>
-  <script type="text/javascript" src="js/lib-market.js?v=1.9.10"></script>
-  <script type="text/javascript" src="js/erc1155-dapp.js?v=1.9.10"></script>
-  <script type="text/javascript" src="js/dapp-init.js?v=1.9.10"></script>
-  <script type="text/javascript" src="js/cookie.js?v=1.9.10"></script>
+  <script type="text/javascript" src="js/config.js?v=1.9.11"></script>
+  <script type="text/javascript" src="js/misc.js?v=1.9.11"></script>
+  <script type="text/javascript" src="js/iotxABI.js?v=1.9.11"></script>
+  <script type="text/javascript" src="js/erc1155ABI.js?v=1.9.11"></script>
+  <script type="text/javascript" src="js/multiBatchABI.js?v=1.9.11"></script>
+  <script type="text/javascript" src="js/marketABI.js?v=1.9.11"></script>
+  <script type="text/javascript" src="js/marketWrapABI.js?v=1.9.11"></script>
+  <script type="text/javascript" src="js/swapABI.js?v=1.9.11"></script>
+  <script type="text/javascript" src="js/erc20ABI.js?v=1.9.11"></script>
+  <script type="text/javascript" src="js/wallet.js"></script>
+  <script type="text/javascript" src="js/common.js"></script>
+  <script type="text/javascript" src="js/lib.js?v=1.9.11"></script>
+  <script type="text/javascript" src="js/lib-market.js?v=1.9.11"></script>
+  <script type="text/javascript" src="js/erc1155-dapp.js?v=1.9.11"></script>
+  <script type="text/javascript" src="js/dapp-init.js?v=1.9.11"></script>
+  <script type="text/javascript" src="js/cookie.js?v=1.9.11"></script>
   <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/web3.min.js" type="text/javascript"></script>
   <script src="assets/js/core/popper.min.js" type="text/javascript"></script>
   <script src="assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
   <script src="assets/js/plugins/chartist.min.js"></script>
@@ -46,6 +49,7 @@
   <link rel="stylesheet" type="text/css"
     href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/common.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css"
     integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" crossorigin="anonymous">
   <style type="text/css">
@@ -162,8 +166,8 @@
   <!-- SIDEBAR -->
   <div class="sidebar">
     <div class="logo">
-      <a href="" class="simple-text logo-normal">
-        <img src="" width="125" border="0" />
+      <a href="https://dapps-marketplace-nfts-iotex.web.app/" class="simple-text logo-normal">
+        <img src="assets/img/logoIotex.png" width="125" border="0" />
         <div id="IoTeX logo" class="text-muted" style="display: none; font-size: 0.7em;">
           IoTeX
         </div>
@@ -918,14 +922,17 @@
         </a>
       </li>
 
-      <li class="nav-item" id="torus">
-        <a class="nav-link" href="javascript:enableTorus();">
-          <span class="material-icons-round">
-            account_balance_wallet
-          </span>
-          Connect Wallet
-        </a>
-      </li>
+      <div id="tools">
+        <div id="links">
+          <li>
+            <a noref id="menu-account" onclick="onAccount()">Connect Wallet</a>
+            <span class="material-icons-round">
+              account_balance_wallet
+            </span>
+
+          </li>
+        </div>
+      </div>   
 
       <li class="nav-item" style="display:none;" id="torusAddress">
         <a href="javascript:void(0);" id="torusAddressPopover" type="button" class="btn btn-clipboard"
@@ -940,6 +947,15 @@
 
   </div>
   <!-- FOOTER END -->
+
+  <div id="popup-wallets" class="popup" style="display:none">
+    <x onclick="hideBuyDirectPopup()"></x>
+    <h2 id="wallet-title">Connect your wallet</h2>
+    <li><button class="wallet-pick" onclick="onWallet('metamask')"><img src="assets/img/metamask.png"> METAMASK</button>
+    </li>
+    <li><button class="wallet-pick" onclick="onWallet('torus')"><img src="assets/img/torus.png"> TORUS </button>
+    </li>
+  </div>
 
   </div>
   <script src="js/themeSwitch.js"></script>
