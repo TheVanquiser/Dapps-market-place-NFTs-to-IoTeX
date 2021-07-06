@@ -16,25 +16,31 @@
   <script type="text/javascript" src="js/handlebars.js"></script>
   <script type="text/javascript" src="js/ipfs.js"></script>
   <script type="text/javascript" src="js/buffer.js"></script>
-  <script type="text/javascript" src="js/config.js?v=1.9.10"></script>
-  <script type="text/javascript" src="js/misc.js?v=1.9.5"></script>
-  <script type="text/javascript" src="js/iotxABI.js?v=1.9.5"></script>
-  <script type="text/javascript" src="js/erc1155ABI.js?v=1.9.5"></script>
-  <script type="text/javascript" src="js/multiBatchABI.js?v=1.9.5"></script>
-  <script type="text/javascript" src="js/erc20ABI.js?v=1.9.5"></script>
-  <script type="text/javascript" src="js/nft2ABI.js?v=1.9.5"></script>
-  <script type="text/javascript" src="js/marketABI.js?v=1.9.5"></script>
-  <script type="text/javascript" src="js/bridgeInABI.js?v=1.9.5"></script>
-  <script type="text/javascript" src="js/bridgeOutABI.js?v=1.9.5"></script>
-  <script type="text/javascript" src="js/marketWrapABI.js?v=1.9.5"></script>
-  <script type="text/javascript" src="js/swapABI.js?v=1.9.5"></script>
-  <script type="text/javascript" src="js/lib.js?v=1.9.5"></script>
-  <script type="text/javascript" src="js/lib-bridge.js?v=1.9.5"></script>
-  <script type="text/javascript" src="js/lib-market.js?v=1.9.5"></script>
-  <script type="text/javascript" src="js/collectibles-dapp.js?v=1.9.5"></script>
-  <script type="text/javascript" src="js/dapp-init.js?v=1.9.5"></script>
-  <script type="text/javascript" src="js/cookie.js?v=1.9.5"></script>
+  <script type="text/javascript" src="js/config.js?v=1.9.11"></script>
+  <script type="text/javascript" src="js/misc.js?v=1.9.11"></script>
+  <script type="text/javascript" src="js/iotxABI.js?v=1.9.11"></script>
+  <script type="text/javascript" src="js/erc1155ABI.js?v=1.9.11"></script>
+  <script type="text/javascript" src="js/multiBatchABI.js?v=1.9.11"></script>
+  <script type="text/javascript" src="js/erc20ABI.js?v=1.9.11"></script>
+  <script type="text/javascript" src="js/nft2ABI.js?v=1.9.11"></script>
+  <script type="text/javascript" src="js/marketABI.js?v=1.9.11"></script>
+  <script type="text/javascript" src="js/bridgeInABI.js?v=1.9.11"></script>
+  <script type="text/javascript" src="js/bridgeOutABI.js?v=1.9.11"></script>
+  <script type="text/javascript" src="js/marketWrapABI.js?v=1.9.11"></script>
+  <script type="text/javascript" src="js/swapABI.js?v=1.9.11"></script>
+  <script type="text/javascript" src="js/nftverseABI.js?v=1.9.11"></script>
+  <script type="text/javascript" src="js/converter721To1155ABI.js?v=1.9.11"></script>
+  <script type="text/javascript" src="js/lib-convert721.js?v=1.9.11"></script>
+  <script type="text/javascript" src="js/wallet.js"></script>
+  <script type="text/javascript" src="js/common.js"></script>
+  <script type="text/javascript" src="js/lib.js?v=1.9.11"></script>
+  <script type="text/javascript" src="js/lib-bridge.js?v=1.9.11"></script>
+  <script type="text/javascript" src="js/lib-market.js?v=1.9.11"></script>
+  <script type="text/javascript" src="js/collectibles-dapp.js?v=1.9.11"></script>
+  <script type="text/javascript" src="js/dapp-init.js?v=1.9.11"></script>
+  <script type="text/javascript" src="js/cookie.js?v=1.9.11"></script>
   <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/web3.min.js" type="text/javascript"></script>
   <script src="assets/js/core/popper.min.js" type="text/javascript"></script>
   <script src="assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
   <script src="assets/js/plugins/chartist.min.js"></script>
@@ -50,6 +56,7 @@
   <link rel="stylesheet" type="text/css"
     href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/common.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css"
     integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" crossorigin="anonymous">
   <style type="text/css">
@@ -166,8 +173,8 @@
   <!-- SIDEBAR -->
   <div class="sidebar">
     <div class="logo">
-      <a href="" class="simple-text logo-normal">
-        <img src="" width="125" border="0" />
+      <a href="https://dapps-marketplace-nfts-iotex.web.app/" class="simple-text logo-normal">
+        <img src="assets/img/logoIotex.png" width="125" border="0" />
         <div id="IoTeXLogo" class="text-muted" style="display: none; font-size: 0.7em;">
           IoTeX
         </div>
@@ -309,30 +316,49 @@
       <div class="content__welcome-text">
         <p>
           This is your personal NFT wallet .
+
         </p>
       </div>
 
       <div class="container-fluid wallet">
 
-        <div class="title-options-container">
-          <h1>Wallet</h1>
-          <div id="walletOptions" style="display:none;">
-            <div class="dropdown">
-              <a href="javascript:void(0);" class="btn btn-primary dropdown-toggle mb-3" id="walletActions"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="material-icons">
-                  settings
-                </span>
-              </a>
-              <div class="dropdown-menu" aria-labelledby="walletActions">
-                <a href="javascript:void(0);" class="dropdown-item" data-toggle="modal"
-                  data-target="#addCollectionModal" id="addCollectionModalButton">Register Collection</a>
-                <a href="javascript:void(0);" style="display: none;" class="dropdown-item" data-toggle="modal"
-                  data-target="#cancelBridgeModal" id="cancelBridgeModalButton">Cancel Bridge Job</a>
+        <div class="container-fluid wallet">
+        
+          <div class="title-options-container">
+            <h1>Wallet</h1>
+           
+            <div id="walletOptions" style="display:none;">
+              <div class="dropdown">
+                <a href="javascript:void(0);" class="btn btn-primary dropdown-toggle mb-3" id="walletActions"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="material-icons">
+                    settings
+                  </span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="walletActions">
+                  <a href="javascript:void(0);" class="dropdown-item" data-toggle="modal" data-target="#addCollectionModal"
+                    id="addCollectionModalButton">Register Collection</a>
+                  <a href="javascript:void(0);" style="display: none;" class="dropdown-item" data-toggle="modal"
+                    data-target="#cancelBridgeModal" id="cancelBridgeModalButton">Cancel Bridge Job</a>
+  
+                  <a href="javascript:void(0);" class="dropdown-item" data-toggle="modal" data-target="#convert721Modal"
+                     id="convert721ModalButton">Convert From EIP-721</a>
+  
+                  <a href="javascript:void(0);" class="dropdown-item" data-toggle="modal" data-target="#return721Modal"
+                     id="return721ModalButton">Return To EIP-721</a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+          <p>
+            If you don't see your NFTs, you need to register your collection.
+            <br>
+
+            Settings -> Register Collection -> Collection address.
+            <br><br>
+  
+            *your collection address is located above the name of your collection. Simply click on it - and it's copied.
+          </p>
 
         <!-- <div id="walletOptions" style="display:none;" class="row">
           <div class="dropdown">
@@ -862,6 +888,86 @@
           </div>
         </div>
 
+         <!-- Return 721 -->
+
+         <div class="modal fade" style="overflow-y: scroll;" id="return721Modal" tabindex="-1" role="dialog"
+         aria-labelledby="return721ModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="return721ModalLabel">Return To EIP-721</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body modal-non-nft-content">
+
+            <p>Please enter the EIP-1155 NFT ID from the Uniftyverse 721 collection in order to receive back the original EIP-721 token.<br/><br/>Please make sure you own all supply of the converted NFT in order to receive the original one.</p>
+
+            <form onsubmit="return false;">
+
+              <div class="form-group">
+                <label for="return721Id">NFT ID *</label>
+                <input value="" type="text" placeholder="The NFT ID of the Uniftyverse 721 collection" class="form-control" id="return721Id">
+              </div>
+
+            </form>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" id="return721Button">Return</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Convert 721 -->
+
+    <div class="modal fade" style="overflow-y: scroll;" id="convert721Modal" tabindex="-1" role="dialog"
+         aria-labelledby="convert721ModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="convert721ModalLabel">Convert From EIP-721</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body modal-non-nft-content">
+
+            <p>Here you may convert individual EIP-721 that you own into EIP-1155 NFTs. You may also define fractions.
+              <br/><br/>Please note that if you want to get back your original EIP-721 NFT, you will need to return all EIP-1155 fractions associated with it.
+              <br/><br/>The resulting EIP-1155 NFTs will be created in the Uniftyverse721 collection at address <span id="uniftyverse721Address"></span>.
+              <br/><br/>After successful conversion, you will get the EIP-1155 token id. Please write down this ID as it is required to receive back your original EIP-721 NFT from the "Return to EIP-721" option.
+            </p>
+
+            <form onsubmit="return false;">
+
+              <div class="form-group">
+                <label for="convert721Address">EIP-721 Address *</label>
+                <input value="" type="text" placeholder="The EIP-721 contract address." class="form-control" id="convert721Address">
+              </div>
+
+              <div class="form-group">
+                <label for="convert721TokenId">NFT ID *</label>
+                <input value="" type="text" placeholder="The NFT id to convert." class="form-control" id="convert721TokenId">
+              </div>
+
+              <div class="form-group">
+                <label for="convert721Fractions">Fractions *</label>
+                <input value="1" type="text" placeholder="The fractions, must be 1 min." class="form-control" id="convert721Fractions">
+              </div>
+
+            </form>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" id="convert721Button">Convert</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
         <!-- Interactive -->
         <div class="modal fade" style="overflow-y: scroll;" id="nftInteractiveModal" tabindex="-1" role="dialog"
@@ -948,14 +1054,17 @@
         </a>
       </li>
 
-      <li class="nav-item" id="torus">
-        <a class="nav-link" href="javascript:enableTorus();">
-          <span class="material-icons-round">
-            account_balance_wallet
-          </span>
-          Connect Wallet
-        </a>
-      </li>
+      <div id="tools">
+        <div id="links">
+          <li>
+            <a noref id="menu-account" onclick="onAccount()">Connect Wallet</a>
+            <span class="material-icons-round">
+              account_balance_wallet
+            </span>
+
+          </li>
+        </div>
+      </div>    
 
       <li class="nav-item" style="display:none;" id="torusAddress">
         <a href="javascript:void(0);" id="torusAddressPopover" type="button" class="btn btn-clipboard"
@@ -970,6 +1079,16 @@
 
   </div>
   <!-- FOOTER END -->
+
+  <div id="popup-wallets" class="popup" style="display:none">
+    <x onclick="hideBuyDirectPopup()"></x>
+    <h2 id="wallet-title">Connect your wallet</h2>
+    <li><button class="wallet-pick" onclick="onWallet('metamask')"><img src="assets/img/metamask.png"> METAMASK</button>
+    </li>
+    <li><button class="wallet-pick" onclick="onWallet('torus')"><img src="assets/img/torus.png"> TORUS </button>
+    </li>
+  </div>
+
 
   </div>
   <script src="js/themeSwitch.js"></script>
