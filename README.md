@@ -11,13 +11,12 @@ https://youtu.be/t55QZrK9JwI
 - ![photo_2021-06-27_23-18-25](https://user-images.githubusercontent.com/86550334/123551931-1d38d300-d79e-11eb-932e-23e226826cec.jpg)
 
 ## Available Wallet
-- Torus ( if you not have metamask)
-- Metamask ( Connect manually SET RPC NETWORK )
+- Torus 
+- Metamask 
 ## Available NETWORK CHAIN
 - IOTEX
-- ETHEREUM
-- Binance Smart Chain
-- Polygon (Matic) 
+- IOTEX Test Net
+- Local Host
 ## Support nfts
 - ART
 - MUSIC
