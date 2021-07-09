@@ -36,8 +36,8 @@ https://youtu.be/t55QZrK9JwI
 - SUPPORT SWAP NFT TO OTHER 
 - SEARCH AND FIND NFT 
 
-## RUN IN LOCALHOST
+## RUN IN FIREBASE
 ```
-npm install
-npm run build 
+CLONE 
+DEPLOY TO FIREBASE
 ```
