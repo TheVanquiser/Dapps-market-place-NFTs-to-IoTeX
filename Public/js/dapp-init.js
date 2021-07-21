@@ -49,14 +49,11 @@ function waitForPaging(pageId, itemCount) {
 
 $(document).ready(async function () {
 
-     // mainnet 
-     const web3 = new Web3('https://babel-api.mainnet.iotex.io');
 
     if (window.ethereum) {
 
         setTimeout(async function () {
 
-            window.web3 = new Web3('https://babel-api.mainnet.iotex.io');
 
             /*
             if(window.ethereum.isTrust){
@@ -66,50 +63,7 @@ $(document).ready(async function () {
 
         
             try {
-                (async () => {
-
-                    // Check that Web3 is connected
-                    await web3.eth.net.isListening();
-                    console.log('Web3 is connected.');
-                    // Get the ChainId (IoTeX will return 4689 for mainnet and 4690 
-                    // for testnet). See below.
-                    const chainId = await web3.eth.net.getId();
-                    
-                    // Get the accounts
-                    let accounts = await web3.eth.getAccounts();
-                    console.log('accounts: ${JSON.stringify(accounts)}');
-                    
-                    // Configure the transfer settings
-                    let txConfig = {
-                      from: accounts[2],
-                      to: accounts[1],
-                      // notice we use a slightly higher gas limit than Ethereum default 
-                      // so we set it explicitely.
-                      gasPrice: "1000000000000",
-                      gas: "85000",
-                      value: "10000000000000000",  // Sending 0.01 IOTX
-                      // IoTeX also has a different Chain Id than the Etehreum networks
-                      // that's why queried it above
-                      chainId
-                    };
-                  
-                    // Sign the tx
-                    let signedTx = await web3.eth.signTransaction(txConfig, accounts[2]);
-                    console.log("Raw signed Tx: ", signedTx.raw);
-                  
-                    // Calculate the expected Hash
-                    const txHash = await web3.utils.sha3(signedTx.raw);
-                    console.log("Tx Hash (calculated): ",txHash);
-                  
-                    // Send the transaction
-                    web3.eth.sendSignedTransaction(signedTx.raw)
-                    .on("receipt", function(receipt) {
-                      console.log("Tx Hash (Receipt): ", receipt.transactionHash);
-                    })
-                    .on("error", function(e) { console.log(e); });
-                  
-                })();
-
+               
                 // Request account access if needed
 
                 let chain = await web3.eth.getChainId();
@@ -128,7 +82,7 @@ $(document).ready(async function () {
 
                     let desc = 'You are not connected to ' + network + '. Please change to the right network in your wallet (Metamask) and reload.';
 
-                } else if (chain_id == '4689') {
+                if (chain_id == '4689') {
 
                     chainName = 'IoTeX';
                     rpcUrl = 'https://babel-api.mainnet.iotex.io';
@@ -164,9 +118,9 @@ $(document).ready(async function () {
                         'Block Explorer URL: N/A<br /><br/>' +
                         'More information on the setup, including how to receive test DEV <a href="https://docs.iotex.io/reference/babel-web3-api" target="_blank">here</a>.';
 
+                }
 
-
-                    desc += '<br /><br /><button class="btn btn-primary" onclick="location.reload()">Reload</button>';
+                   desc += '<br /><br /><button class="btn btn-primary" onclick="location.reload()">Reload</button>';
 
 
                     try {
@@ -223,7 +177,7 @@ $(document).ready(async function () {
     else if (window.web3) {
 
         if (typeof window.web3 == 'undefined' || !window.web3) {
-            window.web3 = new Web3('https://babel-api.mainnet.iotex.io');
+            window.web3 = new Web3(web3.currentProvider);
         }
 
         if (await web3.eth.net.getId() != chain_id.toString(16)) {
