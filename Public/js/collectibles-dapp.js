@@ -1,5 +1,4 @@
 function TncDapp() {
-    const web3 = new Web3('https://babel-api.mainnet.iotex.io');
     //const ipfs = window.IpfsHttpClient('ipfs.infura.io', '5001', { protocol: 'https' });
     const _this = this;
     this.collectibleTemplate = Handlebars.compile($('#collectible-template').html());
