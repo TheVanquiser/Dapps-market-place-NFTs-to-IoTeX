@@ -61,4 +61,4 @@ const web3 = new Web3(provider);
   })
   .on("error", function(e) { console.log(e); });
 
-})
+});
