@@ -1,5 +1,5 @@
 ## DEMO IN FIREBASE
-https://dapps-marketplace-nfts-iotex.web.app/
+https://iotexnfts.web.app/
 ## VIDEO DEMO IN YOUTUBE
 https://youtu.be/t55QZrK9JwI
 
