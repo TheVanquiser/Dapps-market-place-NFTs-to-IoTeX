@@ -1,0 +1,5 @@
+{
+    "external_url":"https://dapps-marketplace-nfts-iotex.web.app/",
+    "image":"https://iotexnfts.web.app/assets/img/iotex.png",
+    "description":"This is an EIP-721 to EIP-1155 converted NFT. If you see this, the original EIP-721 token doesn't support the tokenURI extension."
+  }
