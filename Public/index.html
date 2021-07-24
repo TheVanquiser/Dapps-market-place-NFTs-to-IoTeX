@@ -435,28 +435,30 @@
 <script src="/__/firebase/8.6.8/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
 
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
+
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-analytics.js"></script>
 
 <script>
   // Your web app's Firebase configuration
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
   var firebaseConfig = {
-    apiKey: "AIzaSyA-ev8M-PYkvx8eILy0BuC92YQL_BLuoBg",
-    authDomain: "dapps-marketplace-nfts-iotex.firebaseapp.com",
-    databaseURL: "https://dapps-marketplace-nfts-iotex-default-rtdb.firebaseio.com",
-    projectId: "dapps-marketplace-nfts-iotex",
-    storageBucket: "dapps-marketplace-nfts-iotex.appspot.com",
-    messagingSenderId: "572491240900",
-    appId: "1:572491240900:web:1629267b7c770f2af98091",
-    measurementId: "G-6EHEQZG0VB"
+    apiKey: "AIzaSyAWTFu7Hob2pfQ5oChsptC5N5FOyaVbatI",
+    authDomain: "iotexnfts.firebaseapp.com",
+    databaseURL: "https://iotexnfts-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "iotexnfts",
+    storageBucket: "iotexnfts.appspot.com",
+    messagingSenderId: "945779597798",
+    appId: "1:945779597798:web:ccebbfa6a5d46d48cbb627",
+    measurementId: "G-1XF0J2FD24"
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
-  const db = firebase.firestore();
-
+</script>
       var bigOne = document.getElementById('bigOne');
       var dbref = firebase.database().ref().child('text');
       dbref.on('value', snap => bigOne.innerText = sanp.val());
