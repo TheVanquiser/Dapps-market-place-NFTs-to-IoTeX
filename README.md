@@ -1,5 +1,5 @@
 ## DEMO IN FIREBASE
-https://iotexnfts.web.app/
+iotexnfts.firebaseapp.com
 ## VIDEO DEMO IN YOUTUBE
 https://youtu.be/t55QZrK9JwI
 
