@@ -1,5 +1,3 @@
-let web3 = null;
-
 async function onConnect(info) {
 	console.log('onConnect', info);
 	// info.chainId
