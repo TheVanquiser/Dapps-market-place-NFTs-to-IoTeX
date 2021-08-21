@@ -20,6 +20,7 @@ https://user-images.githubusercontent.com/86550334/130326885-eb77714e-62d6-435a-
 - IOTEX
 - IOTEX Test Net
 - Local Host
+- Rinkeby Testnet
 ## Support nfts
 - ART
 - MUSIC
