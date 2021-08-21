@@ -5,7 +5,7 @@ https://youtu.be/t55QZrK9JwI
 
 # SHORT VIDEO
 ## NFT Market 
-- ![photo_2021-06-27_23-18-33](https://user-images.githubusercontent.com/86550334/123551924-19a54c00-d79e-11eb-84c0-180bc1cf12a2.jpg)
+https://user-images.githubusercontent.com/86550334/130326792-e7bb86ed-28c9-49d9-9c1e-3b5f85d78ca4.mp4
 ## Your Wallet Page ( Connect To Wallet)
 https://user-images.githubusercontent.com/86550334/130326460-092b48f5-87c6-43f1-97f6-62451e57deee.mp4
 
