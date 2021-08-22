@@ -41,29 +41,16 @@ https://user-images.githubusercontent.com/86550334/130326885-eb77714e-62d6-435a-
 - SEARCH AND FIND NFT 
 
 ## TECHNOLOGIES
-- JavaScript frameworks 
+- JavaScript frameworks [Handlebars ```4.7.6```](https://handlebarsjs.com/) 
 
-[Handlebars ```4.7.6```](https://handlebarsjs.com/) 
-
-- Font scripts 
-
-[Google Font API](https://fonts.google.com/)
-
+- Font scripts [Google Font API](https://fonts.google.com/)
 [Font Awesome](https://fontawesome.com/)
 
-- CDN 
+- CDN [jsDelivr](https://www.jsdelivr.com/)
 
-[jsDelivr](https://www.jsdelivr.com/)
+- Miscellaneous [webpack](https://webpack.js.org/)
 
-- Miscellaneous 
+- JavaScript libraries [jQuery ```3.5.1```](https://jquery.com/)
 
-[webpack](https://webpack.js.org/)
-
-- JavaScript libraries 
-
-[jQuery ```3.5.1```](https://jquery.com/)
-
-- UI frameworks 
-
-[Bootstrap ```4.5.3```](https://getbootstrap.com/)
+- UI frameworks [Bootstrap ```4.5.3```](https://getbootstrap.com/)
 
