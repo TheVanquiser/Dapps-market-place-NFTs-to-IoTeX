@@ -40,7 +40,7 @@ https://user-images.githubusercontent.com/86550334/130326885-eb77714e-62d6-435a-
 - SUPPORT SWAP NFT TO OTHER 
 - SEARCH AND FIND NFT 
 
-## TECHNOLOGIES
+### TECHNOLOGIES
 - JavaScript frameworks : Handlebars 4.7.6
 - Font scripts : Google Font API and Font Awesome
 - CDN : jsDelivr
