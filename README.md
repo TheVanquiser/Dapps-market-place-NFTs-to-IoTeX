@@ -41,12 +41,14 @@ https://user-images.githubusercontent.com/86550334/130326885-eb77714e-62d6-435a-
 - SEARCH AND FIND NFT 
 
 # TECHNOLOGIES
-## JavaScript frameworks 
 ```
+## JavaScript frameworks 
+
 Handlebars 4.7.6
 ```
-## Font scripts 
 ```
+## Font scripts 
+
 Google Font API 
 Font Awesome
 ```
@@ -65,4 +67,5 @@ jQuery 3.5.1
 ## UI frameworks 
 ```
 Bootstrap 4.5.3
+```
 ```
