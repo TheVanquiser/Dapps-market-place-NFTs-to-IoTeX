@@ -51,19 +51,19 @@ https://user-images.githubusercontent.com/86550334/130326885-eb77714e-62d6-435a-
 
 [Font Awesome](https://fontawesome.com/)
 
-## CDN 
+- CDN 
 
 [jsDelivr](https://www.jsdelivr.com/)
 
-## Miscellaneous 
+- Miscellaneous 
 
 [webpack](https://webpack.js.org/)
 
-## JavaScript libraries 
+- JavaScript libraries 
 
 [jQuery ```3.5.1```](https://jquery.com/)
 
-## UI frameworks 
+- UI frameworks 
 
 [Bootstrap ```4.5.3```](https://getbootstrap.com/)
 
