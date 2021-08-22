@@ -43,7 +43,7 @@ https://user-images.githubusercontent.com/86550334/130326885-eb77714e-62d6-435a-
 # TECHNOLOGIES
 ## JavaScript frameworks 
 
-[Handlebars] (https://handlebarsjs.com/) ```4.7.6```
+[![Handlebars```4.7.6```](https://handlebarsjs.com/) 
 
 ## Font scripts 
 ```
