@@ -42,9 +42,9 @@ https://user-images.githubusercontent.com/86550334/130326885-eb77714e-62d6-435a-
 
 # TECHNOLOGIES
 ## JavaScript frameworks 
-```
-[Handlebars] (https://handlebarsjs.com/) 4.7.6
-```
+
+[Handlebars] (https://handlebarsjs.com/) ```4.7.6```
+
 ## Font scripts 
 ```
 Google Font API 
