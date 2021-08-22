@@ -46,23 +46,23 @@ https://user-images.githubusercontent.com/86550334/130326885-eb77714e-62d6-435a-
 [Handlebars ```4.7.6```](https://handlebarsjs.com/) 
 
 ## Font scripts 
-```
-Google Font API 
-Font Awesome
-```
+
+[Google Font API](https://fonts.google.com/)
+[Font Awesome](https://fontawesome.com/)
+
 ## CDN 
-```
-jsDelivr
-```
+
+[jsDelivr](https://www.jsdelivr.com/)
+
 ## Miscellaneous 
-```
-webpack
-```
+
+[webpack](https://webpack.js.org/)
+
 ## JavaScript libraries 
-```
-jQuery 3.5.1
-```
+
+[jQuery ```3.5.1```](https://jquery.com/)
+
 ## UI frameworks 
-```
-Bootstrap 4.5.3
-```
+
+[Bootstrap ```4.5.3```](https://getbootstrap.com/)
+
